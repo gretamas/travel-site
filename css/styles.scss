@@ -1,0 +1,542 @@
+// Variables
+$mainColor: white;
+$baseMargin: 16px;
+
+// Mixins
+@mixin Flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin Font($family: "Josefin Sans", $size: 1rem, $weight: 400) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: normal;
+  color: $mainColor;
+  line-height: 26px;
+}
+
+// Global Styles
+body {
+  margin: 1rem;
+}
+
+// Header Section
+
+.header-section__scroll {
+  width: 108px;
+  height: 46px;
+  text-align: center;
+  margin-top: 100px;
+
+  a {
+    @include Font($size: 0.8rem, $weight: 400);
+    letter-spacing: 2.8px;
+    text-decoration: none;
+  }
+
+  svg {
+    width: 17px;
+    height: 11px;
+  }
+}
+
+.header-section__container {
+  height: 90vh;
+  width: 98vw;
+  background: url("../images/image 1.jpg") center/cover no-repeat;
+  @include Flex(column);
+
+  .header-section__description {
+    text-align: center;
+
+    h1 {
+      @include Font($size: 3rem, $weight: 700);
+      letter-spacing: 4.8px;
+      margin-bottom: $baseMargin;
+    }
+
+    h2 {
+      @include Font($size: 1.3rem, $weight: 300);
+      letter-spacing: 6.8px;
+      margin-bottom: $baseMargin * 3;
+    }
+  }
+}
+
+// Header Search Bar
+.header-section__search-bar {
+  input {
+    border: none;
+    padding: 18px 35px 19px;
+    letter-spacing: 2.8px;
+    @include Font($size: 0.8rem);
+    color: #232323;
+    width: 503px;
+
+    &:focus {
+      border: 1px solid #5474fd;
+    }
+  }
+
+  a button {
+    @include Font($size: 0.8rem);
+    letter-spacing: 1.4px;
+    height: 63px;
+    width: 153px;
+    background-color: #5474fd;
+    border: 2px solid $mainColor;
+    padding: 16px 0px 22px;
+    margin-left: -4px;
+
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
+
+    i {
+      margin-left: 4px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .header-section__search-bar {
+    @include Flex(column);
+    column-gap: 48px;
+
+    input {
+      padding: 19px 0px;
+      width: 65vw;
+      margin-bottom: $baseMargin * 3;
+      padding-left: 15px;
+    }
+
+    a {
+      display: block;
+    }
+  }
+}
+
+// Navigation
+.navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+// Main Navigation
+.main-navigation {
+  @include Flex(row, space-around);
+
+  width: 98vw;
+  height: 83px;
+  background-color: #5474fd;
+
+  label {
+    @include Font($size: 1.5rem, $weight: 700);
+    letter-spacing: 2.4px;
+    align-self: center;
+  }
+}
+
+// Pages Navigation
+.pages-navigation {
+  @include Flex(row);
+
+  .logo-container {
+    display: none;
+
+    .logo {
+      font-size: 2rem;
+      padding: 10px;
+      color: $mainColor;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin: 30px 20px;
+      padding: 10px;
+
+      a {
+        @include Font($size: 1rem, $weight: 400);
+        letter-spacing: 1px;
+        text-decoration: none;
+      }
+
+      &:hover {
+        background-color: #3e61fb;
+        border: 1px solid $mainColor;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    ul {
+      display: none;
+    }
+
+    .logo-container {
+      display: block;
+      margin-left: 0px;
+      margin-top: 25px;
+      height: 83px;
+    }
+
+    ul {
+      color: $mainColor;
+      background-color: #5474fd;
+      width: 98vw;
+      position: absolute;
+      top: 83px;
+      left: 0;
+
+      &:hover {
+        display: block;
+      }
+
+      li {
+        display: block;
+        text-align: center;
+        height: 42px;
+        z-index: 1;
+      }
+    }
+
+    .logo-container:hover ~ ul {
+      display: block;
+    }
+  }
+}
+
+// About Us Section
+.about-us__container {
+  height: 70vh;
+  width: 98vw;
+  background: url("../images/Rectangle 41444.png") center/cover no-repeat;
+  display: inline-block;
+  position: relative;
+
+  .about-us__description {
+    @include Flex(column);
+    align-items: start;
+    margin: 5% 23%;
+    width: 32vw;
+
+    h2 {
+      @include Font($size: 2.2rem);
+      letter-spacing: 1px;
+      margin-bottom: 3rem;
+    }
+
+    p {
+      @include Font();
+      letter-spacing: 1.6px;
+      margin-bottom: 2rem;
+      width: 31vw;
+    }
+
+    button {
+      @include Font();
+      letter-spacing: 1.2px;
+      width: 228px;
+      background-color: #5474fd;
+      border: none;
+      padding: 16px 9px;
+      margin-top: 1rem;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .about-us__images {
+    margin: 5% 23%;
+
+    img {
+      width: 350px;
+      height: 220px;
+    }
+
+    .about-us__house-img {
+      position: absolute;
+      top: 10vh;
+      left: 55vw;
+    }
+
+    .about-us__mountain-img {
+      position: absolute;
+      top: 40vh;
+      left: 60vw;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    position: static;
+    height: max-content;
+
+    .about-us__description {
+      align-items: center;
+      width: 80%;
+      margin: 15vh auto 15vh;
+
+      h2,
+      p {
+        width: 90%;
+      }
+    }
+
+    .about-us__images {
+      display: none;
+    }
+  }
+}
+
+// Icons Section
+.icons-section {
+  width: 98vw;
+  height: 30vh;
+  background-color: #333333;
+
+  .icons-section__shape {
+    margin-top: $baseMargin;
+    height: 9vh;
+    padding-left: 400px;
+  }
+
+  .icons-section__content {
+    @include Flex(row);
+    column-gap: 130px;
+    text-align: center;
+    margin-top: -25px;
+
+    img {
+      height: 63px;
+      margin-bottom: 2rem;
+      background-color: #333333;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    p {
+      @include Font($size: 2rem);
+    }
+  }
+
+  @media (max-width: 1300px) {
+    height: 25vh;
+    .icons-section__shape {
+      display: none;
+    }
+
+    .icons-section__content {
+      column-gap: 3rem;
+      align-items: center;
+      padding: 1rem;
+      width: 90%;
+      max-width: 90%;
+
+      img {
+        height: 2rem;
+        margin-top: $baseMargin * 2;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Book Spain Section
+
+.book-spain__container {
+  background: url("../images/Rectangle\ 414\ 45.svg") center/cover no-repeat;
+}
+
+.book-spain__container--second {
+  background: url("../images/Rectangle\ 41445.png") center/cover no-repeat;
+}
+
+.book-spain__container,
+.book-spain__container--second {
+  height: 700px;
+  width: 98vw;
+  display: flex;
+
+  .book-spain__content,
+  .book-spain__content--second {
+    @include Flex(column);
+    align-items: start;
+    row-gap: 18px;
+    height: 374px;
+    width: 543px;
+    opacity: 0.9;
+    background-color: #232323;
+    padding: 20px;
+    margin-left: 10%;
+    transform: translateY(200px);
+
+    h3 {
+      @include Font($size: 1.2rem);
+      letter-spacing: 1.5px;
+    }
+
+    h2 {
+      @include Font($size: 1.5rem);
+    }
+
+    p {
+      @include Font();
+    }
+
+    button {
+      @include Font();
+      letter-spacing: 1.2px;
+      width: 228px;
+      background-color: #5474fd;
+      border: none;
+      padding: 16px 9px;
+      margin-top: 1rem;
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .book-spain__content--second {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .book-spain__container,
+  .book-spain__container--second {
+    flex-direction: column;
+    align-items: center;
+
+    .book-spain__content,
+    .book-spain__content--second {
+      width: 70%;
+      max-width: 70%;
+      margin: 30px 0;
+    }
+  }
+}
+
+.feedback-section__container {
+  height: 80vh;
+  width: 98vw;
+  background: url("../images/Rectangle 4142 1.png") center/cover no-repeat;
+  @include Flex(column);
+
+  h2 {
+    @include Font($size: 2.25rem);
+    margin: $baseMargin * 3 auto $baseMargin * 3;
+  }
+
+  .feedback-section__content {
+    @include Flex(row);
+    row-gap: $baseMargin;
+    background-color: #333333;
+
+    .feedback-section__content-description {
+      @include Flex(column);
+      align-items: start;
+      padding: 0px 25px;
+      row-gap: $baseMargin;
+      width: 40vw;
+
+      h3 {
+        @include Font($size: 1.2rem);
+      }
+
+      p {
+        @include Font();
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 2rem;
+      margin: $baseMargin * 2 auto;
+    }
+
+    .feedback-section__content {
+      flex-direction: column;
+      width: 70%;
+
+      img {
+        display: none;
+      }
+
+      .feedback-section__content-description {
+        width: 80%;
+        max-width: 80%;
+        padding: 0;
+
+        h3 {
+          font-size: 1.1rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+// Footer Content
+.footer-content {
+  width: 98vw;
+  height: 20vh;
+  margin-bottom: 1.5vh;
+  background-color: #232323;
+  @include Flex(column);
+
+  h2 {
+    @include Font($size: 1.5rem, $weight: 700);
+    letter-spacing: 3.4px;
+    margin-bottom: $baseMargin / 2;
+  }
+
+  p {
+    @include Font();
+    letter-spacing: 1.6px;
+    margin-bottom: $baseMargin;
+  }
+
+  .footer-content__icons {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin-left: 2vw;
+  }
+}

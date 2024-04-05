@@ -1,0 +1,598 @@
+body {
+  margin: 1rem;
+}
+
+.header-section__scroll {
+  width: 108px;
+  height: 46px;
+  text-align: center;
+  margin-top: 100px;
+}
+.header-section__scroll a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 2.8px;
+  text-decoration: none;
+}
+.header-section__scroll svg {
+  width: 17px;
+  height: 11px;
+}
+
+.header-section__container {
+  height: 90vh;
+  width: 98vw;
+  background: url("../images/image 1.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-section__container .header-section__description {
+  text-align: center;
+}
+.header-section__container .header-section__description h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 4.8px;
+  margin-bottom: 16px;
+}
+.header-section__container .header-section__description h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 6.8px;
+  margin-bottom: 48px;
+}
+
+.header-section__search-bar input {
+  border: none;
+  padding: 18px 35px 19px;
+  letter-spacing: 2.8px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  color: #232323;
+  width: 503px;
+}
+.header-section__search-bar input:focus {
+  border: 1px solid #5474fd;
+}
+.header-section__search-bar a button {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1.4px;
+  height: 63px;
+  width: 153px;
+  background-color: #5474fd;
+  border: 2px solid white;
+  padding: 16px 0px 22px;
+  margin-left: -4px;
+}
+.header-section__search-bar a button:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+.header-section__search-bar a button i {
+  margin-left: 4px;
+}
+
+@media (max-width: 800px) {
+  .header-section__search-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -moz-column-gap: 48px;
+         column-gap: 48px;
+  }
+  .header-section__search-bar input {
+    padding: 19px 0px;
+    width: 65vw;
+    margin-bottom: 48px;
+    padding-left: 15px;
+  }
+  .header-section__search-bar a {
+    display: block;
+  }
+}
+.navigation {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 98vw;
+  height: 83px;
+  background-color: #5474fd;
+}
+.main-navigation label {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 2.4px;
+  align-self: center;
+}
+
+.pages-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.pages-navigation .logo-container {
+  display: none;
+}
+.pages-navigation .logo-container .logo {
+  font-size: 2rem;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+.pages-navigation .logo-container .logo:hover {
+  transform: scale(1.08);
+}
+.pages-navigation ul {
+  list-style: none;
+}
+.pages-navigation ul li {
+  display: inline-block;
+  margin: 30px 20px;
+  padding: 10px;
+}
+.pages-navigation ul li a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.pages-navigation ul li:hover {
+  background-color: #3e61fb;
+  border: 1px solid white;
+  transform: scale(1.05);
+}
+@media (max-width: 1000px) {
+  .pages-navigation ul {
+    display: none;
+  }
+  .pages-navigation .logo-container {
+    display: block;
+    margin-left: 0px;
+    margin-top: 25px;
+    height: 83px;
+  }
+  .pages-navigation ul {
+    color: white;
+    background-color: #5474fd;
+    width: 98vw;
+    position: absolute;
+    top: 83px;
+    left: 0;
+  }
+  .pages-navigation ul:hover {
+    display: block;
+  }
+  .pages-navigation ul li {
+    display: block;
+    text-align: center;
+    height: 42px;
+    z-index: 1;
+  }
+  .pages-navigation .logo-container:hover ~ ul {
+    display: block;
+  }
+}
+
+.about-us__container {
+  height: 70vh;
+  width: 98vw;
+  background: url("../images/Rectangle 41444.png") center/cover no-repeat;
+  display: inline-block;
+  position: relative;
+}
+.about-us__container .about-us__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: start;
+  margin: 5% 23%;
+  width: 32vw;
+}
+.about-us__container .about-us__description h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+.about-us__container .about-us__description p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  margin-bottom: 2rem;
+  width: 31vw;
+}
+.about-us__container .about-us__description button {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  width: 228px;
+  background-color: #5474fd;
+  border: none;
+  padding: 16px 9px;
+  margin-top: 1rem;
+}
+.about-us__container .about-us__description button:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+.about-us__container .about-us__images {
+  margin: 5% 23%;
+}
+.about-us__container .about-us__images img {
+  width: 350px;
+  height: 220px;
+}
+.about-us__container .about-us__images .about-us__house-img {
+  position: absolute;
+  top: 10vh;
+  left: 55vw;
+}
+.about-us__container .about-us__images .about-us__mountain-img {
+  position: absolute;
+  top: 40vh;
+  left: 60vw;
+}
+@media (max-width: 1300px) {
+  .about-us__container {
+    position: static;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .about-us__container .about-us__description {
+    align-items: center;
+    width: 80%;
+    margin: 15vh auto 15vh;
+  }
+  .about-us__container .about-us__description h2,
+  .about-us__container .about-us__description p {
+    width: 90%;
+  }
+  .about-us__container .about-us__images {
+    display: none;
+  }
+}
+
+.icons-section {
+  width: 98vw;
+  height: 30vh;
+  background-color: #333333;
+}
+.icons-section .icons-section__shape {
+  margin-top: 16px;
+  height: 9vh;
+  padding-left: 400px;
+}
+.icons-section .icons-section__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 130px;
+       column-gap: 130px;
+  text-align: center;
+  margin-top: -25px;
+}
+.icons-section .icons-section__content img {
+  height: 63px;
+  margin-bottom: 2rem;
+  background-color: #333333;
+}
+.icons-section .icons-section__content img:hover {
+  transform: scale(1.02);
+}
+.icons-section .icons-section__content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+}
+@media (max-width: 1300px) {
+  .icons-section {
+    height: 25vh;
+  }
+  .icons-section .icons-section__shape {
+    display: none;
+  }
+  .icons-section .icons-section__content {
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    max-width: 90%;
+  }
+  .icons-section .icons-section__content img {
+    height: 2rem;
+    margin-top: 32px;
+  }
+  .icons-section .icons-section__content p {
+    font-size: 1rem;
+  }
+}
+
+.book-spain__container {
+  background: url("../images/Rectangle 414 45.svg") center/cover no-repeat;
+}
+
+.book-spain__container--second {
+  background: url("../images/Rectangle 41445.png") center/cover no-repeat;
+}
+
+.book-spain__container,
+.book-spain__container--second {
+  height: 700px;
+  width: 98vw;
+  display: flex;
+}
+.book-spain__container .book-spain__content,
+.book-spain__container .book-spain__content--second,
+.book-spain__container--second .book-spain__content,
+.book-spain__container--second .book-spain__content--second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: start;
+  row-gap: 18px;
+  height: 374px;
+  width: 543px;
+  opacity: 0.9;
+  background-color: #232323;
+  padding: 20px;
+  margin-left: 10%;
+  transform: translateY(200px);
+}
+.book-spain__container .book-spain__content h3,
+.book-spain__container .book-spain__content--second h3,
+.book-spain__container--second .book-spain__content h3,
+.book-spain__container--second .book-spain__content--second h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+}
+.book-spain__container .book-spain__content h2,
+.book-spain__container .book-spain__content--second h2,
+.book-spain__container--second .book-spain__content h2,
+.book-spain__container--second .book-spain__content--second h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+}
+.book-spain__container .book-spain__content p,
+.book-spain__container .book-spain__content--second p,
+.book-spain__container--second .book-spain__content p,
+.book-spain__container--second .book-spain__content--second p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+}
+.book-spain__container .book-spain__content button,
+.book-spain__container .book-spain__content--second button,
+.book-spain__container--second .book-spain__content button,
+.book-spain__container--second .book-spain__content--second button {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1.2px;
+  width: 228px;
+  background-color: #5474fd;
+  border: none;
+  padding: 16px 9px;
+  margin-top: 1rem;
+}
+.book-spain__container .book-spain__content button:hover,
+.book-spain__container .book-spain__content--second button:hover,
+.book-spain__container--second .book-spain__content button:hover,
+.book-spain__container--second .book-spain__content--second button:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+.book-spain__container .book-spain__content--second,
+.book-spain__container--second .book-spain__content--second {
+  margin-left: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+  .book-spain__container,
+  .book-spain__container--second {
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-spain__container .book-spain__content,
+  .book-spain__container .book-spain__content--second,
+  .book-spain__container--second .book-spain__content,
+  .book-spain__container--second .book-spain__content--second {
+    width: 70%;
+    max-width: 70%;
+    margin: 30px 0;
+  }
+}
+.feedback-section__container {
+  height: 80vh;
+  width: 98vw;
+  background: url("../images/Rectangle 4142 1.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.feedback-section__container h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  margin: 48px auto 48px;
+}
+.feedback-section__container .feedback-section__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  row-gap: 16px;
+  background-color: #333333;
+}
+.feedback-section__container .feedback-section__content .feedback-section__content-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: start;
+  padding: 0px 25px;
+  row-gap: 16px;
+  width: 40vw;
+}
+.feedback-section__container .feedback-section__content .feedback-section__content-description h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+}
+.feedback-section__container .feedback-section__content .feedback-section__content-description p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+}
+@media (max-width: 1000px) {
+  .feedback-section__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feedback-section__container h2 {
+    font-size: 2rem;
+    margin: 32px auto;
+  }
+  .feedback-section__container .feedback-section__content {
+    flex-direction: column;
+    width: 70%;
+  }
+  .feedback-section__container .feedback-section__content img {
+    display: none;
+  }
+  .feedback-section__container .feedback-section__content .feedback-section__content-description {
+    width: 80%;
+    max-width: 80%;
+    padding: 0;
+  }
+  .feedback-section__container .feedback-section__content .feedback-section__content-description h3 {
+    font-size: 1.1rem;
+  }
+  .feedback-section__container .feedback-section__content .feedback-section__content-description p {
+    font-size: 0.9rem;
+  }
+}
+
+.footer-content {
+  width: 98vw;
+  height: 20vh;
+  margin-bottom: 1.5vh;
+  background-color: #232323;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 3.4px;
+  margin-bottom: 8px;
+}
+.footer-content p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  line-height: 26px;
+  letter-spacing: 1.6px;
+  margin-bottom: 16px;
+}
+.footer-content .footer-content__icons {
+  display: inline-block;
+}
+
+@media (max-width: 1000px) {
+  body {
+    margin-left: 2vw;
+  }
+}/*# sourceMappingURL=styles.css.map */
